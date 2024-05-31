@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Biblioteca</title>
+</head>
+<body>
+    <h1>Biblioteca de Libros</h1>
+    <script>
+        const libros = ['Cien años de soledad', 'Don Quijote de la Mancha', 'Matar a un ruiseñor'];
+
+        function contarLibros() {
+            const cantidad = libros.length;
+            console.log('Cantidad de libros:', cantidad);
+        }
+        function mostrarLibros() {
+            console.log('Libros:', libros);
+        }
+        function agregarLibro(nuevoLibro) {
+            libros.push(nuevoLibro);
+            console.log(`Libro "${nuevoLibro}" agregado`);
+        }
+        function saludar(nombre) {
+            console.log(`Hola ${nombre}, bienvenido a nuestra biblioteca`);
+        }
+        function main() {
+            const nombreUsuario = prompt("Por favor, ingresa tu nombre:");
+            saludar(nombreUsuario);
+            mostrarLibros();
+            agregarLibro('El principito'); 
+            contarLibros();
+            mostrarLibros();
+            agregarLibro('Ciudades de Papel'); 
+            contarLibros();
+        }
+
+        main();
+    </script>
+</body>
+</html>
